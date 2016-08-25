@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/content_padding_bottom"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/timer_layout_params_margin_top">
+
+        <!-- TimerView A -->
+
+        <TextView
+            android:id="@+id/layout_params_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:text="@string/parent_timer_layout_params_format" />
+
+        <FrameLayout
+            android:id="@+id/frame_a"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="@dimen/frame_margin_top"
+            android:background="@drawable/bg_parent">
+
+            <io.caster.customviews.TimerView
+                android:id="@+id/timer_a"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/dimensions_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/timer_dimensions_margin_top"
+            android:gravity="center"
+            tools:text="@string/timer_width_height" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/timer_layout_params_margin_top"
+            android:layout_marginBottom="@dimen/timer_divider_margin_bottom"
+            android:background="@color/colorDivider" />
+
+        <!-- TimerView B -->
+
+        <TextView
+            android:id="@+id/layout_params_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:text="@string/parent_timer_layout_params_format" />
+
+        <FrameLayout
+            android:id="@+id/frame_b"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="@dimen/frame_margin_top"
+            android:background="@drawable/bg_parent">
+
+            <io.caster.customviews.TimerView
+                android:id="@+id/timer_b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/dimensions_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/timer_dimensions_margin_top"
+            android:gravity="center"
+            tools:text="@string/timer_width_height" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/timer_layout_params_margin_top"
+            android:layout_marginBottom="@dimen/timer_divider_margin_bottom"
+            android:background="@color/colorDivider" />
+
+        <!-- TimerView C -->
+
+        <TextView
+            android:id="@+id/layout_params_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:text="@string/parent_timer_layout_params_format" />
+
+        <FrameLayout
+            android:id="@+id/frame_c"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="@dimen/frame_margin_top"
+            android:background="@drawable/bg_parent">
+
+            <io.caster.customviews.TimerView
+                android:id="@+id/timer_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="24dp"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/dimensions_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/timer_dimensions_margin_top"
+            android:gravity="center"
+            tools:text="@string/timer_width_height" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/timer_layout_params_margin_top"
+            android:layout_marginBottom="@dimen/timer_divider_margin_bottom"
+            android:background="@color/colorDivider" />
+
+        <!-- TimerView D -->
+
+        <TextView
+            android:id="@+id/layout_params_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:text="@string/parent_timer_layout_params_format" />
+
+        <FrameLayout
+            android:id="@+id/frame_d"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/frame_margin_top"
+            android:background="@drawable/bg_parent"
+            android:minHeight="8dp">
+
+            <io.caster.customviews.TimerView
+                android:id="@+id/timer_d"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/dimensions_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:text="@string/timer_width_height" />
+
+    </LinearLayout>
+
+</ScrollView>
