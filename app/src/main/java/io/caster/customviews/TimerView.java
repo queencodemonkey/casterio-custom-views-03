@@ -16,6 +16,8 @@ import android.view.View;
  */
 public class TimerView extends View {
 
+    private static final long MAX_SECONDS = 99999;
+
     private Paint backgroundPaint;
     private TextPaint numberPaint;
 
@@ -80,6 +82,19 @@ public class TimerView extends View {
     //
 
     @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        Paint.FontMetrics numberFontMetrics = numberPaint.getFontMetrics();
+        int maxTextWidth = (int) Math.ceil(numberPaint.measureText(String.valueOf(MAX_SECONDS)));
+        int maxTextHeight = (int) Math.ceil(-numberFontMetrics.top + numberFontMetrics.bottom);
+
+        int contentSize = Math.max(maxTextWidth, maxTextHeight);
+
+        int measuredWidth = resolveSize(contentSize, widthMeasureSpec);
+        int measuredHeight = resolveSize(contentSize, heightMeasureSpec);
+        setMeasuredDimension(measuredWidth, measuredHeight);
+    }
+
+    @Override
     protected void onDraw(Canvas canvas) {
         int canvasWidth = canvas.getWidth();
         int canvasHeight = canvas.getHeight();
@@ -91,7 +106,7 @@ public class TimerView extends View {
         float radius = (canvasWidth < canvasHeight ? canvasWidth : canvasHeight) * 0.5f;
 
         // Calculate elapsed # of seconds.
-        long seconds = (long) ((System.currentTimeMillis() - startTime) * 0.001);
+        long seconds = Math.min((long)((System.currentTimeMillis() - startTime) * 0.001), MAX_SECONDS);
         String number = String.valueOf(seconds);
         // Calculate offsets for positioning text.
         float textOffsetX = numberPaint.measureText(number) * 0.5f;

@@ -154,6 +154,7 @@
                 android:id="@+id/timer_d"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:padding="40dp"
                 android:layout_gravity="center" />
 
         </FrameLayout>
