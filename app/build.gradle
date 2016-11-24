@@ -2,8 +2,9 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 
 ext.versions = [
-        support: "24.2.0",
-        constraintlayout: "1.0.0-alpha7",
+        buildtools: "25.0.1",
+        support: "25.0.1",
+        constraintlayout: "1.0.0-beta4",
         butterknife: "8.2.1"
 ]
 
@@ -13,12 +14,12 @@ def versionPatch = 0
 def versionBuild = 0
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion '24.0.2'
+    compileSdkVersion 25
+    buildToolsVersion "${versions.buildtools}"
     defaultConfig {
         applicationId "io.caster.customviews"
         minSdkVersion 19
-        targetSdkVersion 24
+        targetSdkVersion 25
         versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
